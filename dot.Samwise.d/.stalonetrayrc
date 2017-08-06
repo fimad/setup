@@ -1,0 +1,6 @@
+background "#002b36"
+
+geometry 4x1-0+0
+max_geometry 4x1
+icon_size 36
+icon_gravity NE
