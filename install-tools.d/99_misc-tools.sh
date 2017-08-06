@@ -15,6 +15,7 @@ install() {
       rxvt-unicode-256color \
       stalonetray \
       suckless-tools \
+      thunar \
       tmux \
       weechat
 }
