@@ -7,3 +7,4 @@ echo git clone https://github.com/fimad/setup.git
 cd setup
 echo ./install-tools.sh
 echo ./install-dots.sh
+echo ./setup.sh
