@@ -124,7 +124,7 @@ myAdditionalKeys = [
   , ((0, xK_Print), spawn "scrot")
 
   -- Commonly run programs
-  , ((controlMask .|. mod1Mask, xK_bracketright), spawn "thunar")
+  , ((controlMask .|. mod1Mask, xK_bracketright), spawn "nautilus --no-desktop")
   , ((controlMask .|. mod1Mask, xK_bracketleft), spawn "google-chrome")
   , ((controlMask .|. mod1Mask, xK_Return), spawn "urxvt")
   , ((mod4Mask, xK_p), spawn "dmenu_run -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93a1a1' -fn '-*-fixed-*-*-*-*-*-*-*-*-*-*-*-*'")
@@ -183,12 +183,9 @@ myAdditionalKeys = [
 -------------------------------------------------------------------------------}
 main = do
   home <- getEnv "HOME"
-  h <- spawnPipe "xmobar -x 1"
+  h <- spawnPipe (home ++ "/.xmonad/init.sh")
   xmonad $ docks $ desktopConfig {
-      startupHook = do
-        startupHook desktopConfig
-        spawn (home ++ "/.xmonad/init.sh")
-    , focusedBorderColor = "#cb4b16"
+      focusedBorderColor = "#cb4b16"
     , normalBorderColor = "#002b36"
     , borderWidth = 0
     , handleEventHook = fullscreenEventHook

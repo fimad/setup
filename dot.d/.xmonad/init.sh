@@ -1,11 +1,11 @@
 #!/bin/sh
 
-#Set up background
+# Set up background.
 hsetroot -solid "#002b36"
 
 IBUS_ENABLE_SYNC_MODE=1 ibus-daemon -xrd
 
-#disable the tap to click
+# Disable the tap to click.
 synclient TapButton1=0
 
 killall nm-applet
@@ -24,7 +24,8 @@ ghc \
 $HOME/.xmonad/bin/irc-status-bar \
   '#greatestguys' \
   "$HOME/.weechat/logs/irc.freenode-direct.#greatestguys.weechatlog" \
-  'will:' '@will' 'fimad' 2>> ~/.xmonad/irc-status-bar.errors
+  'will:' '@will' 'fimad' 2>> ~/.xmonad/irc-status-bar.errors \
+  &
 
 # Comptom is now started via ~/.xsession. For some reason it needs to be started
 # before xmonad in order for it to be aware of the active window.
@@ -47,3 +48,7 @@ $HOME/.xmonad/bin/irc-status-bar \
 #  --use-ewmh-active-win --glx-no-stencil \
 #  --focus-exclude "name~='dzen title'" \
 #  --shadow-exclude "name~='.*'" 
+
+# xmobar must be last and must be left in the foreground so that it can
+# communicate with xmonad over a pipe.
+xmobar -x 1
