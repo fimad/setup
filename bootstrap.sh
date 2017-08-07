@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get install git
-mkdir -p Code
+mkdir -p ~/Code
 cd ~/Code
 git clone https://github.com/fimad/setup.git
 cd setup

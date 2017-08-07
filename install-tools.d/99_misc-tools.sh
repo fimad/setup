@@ -12,6 +12,7 @@ apt_deps=(
   thunar \
   tmux \
   weechat \
+  xclip \
 )
 
 check_install() {
