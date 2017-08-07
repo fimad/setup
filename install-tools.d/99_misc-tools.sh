@@ -3,7 +3,6 @@
 name="misc tools"
 
 apt_deps=(
-  compton \
   dzen2 \
   hsetroot \
   redshift \
@@ -17,7 +16,6 @@ apt_deps=(
 )
 
 check_install() {
-  # Everything will be installed via apt_deps.
   true
 }
 

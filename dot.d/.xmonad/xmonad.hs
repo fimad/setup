@@ -183,10 +183,12 @@ myAdditionalKeys = [
 -------------------------------------------------------------------------------}
 main = do
   home <- getEnv "HOME"
-  runCommand (home ++ "/.xmonad/init.sh")
   h <- spawnPipe "xmobar -x 1"
   xmonad $ docks $ desktopConfig {
-      focusedBorderColor = "#cb4b16"
+      startupHook = do
+        startupHook desktopConfig
+        spawn (home ++ "/.xmonad/init.sh")
+    , focusedBorderColor = "#cb4b16"
     , normalBorderColor = "#002b36"
     , borderWidth = 0
     , handleEventHook = fullscreenEventHook

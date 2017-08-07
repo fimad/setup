@@ -1,7 +1,6 @@
 #!/bin/sh
 
 #Set up background
-#hsetroot -solid "#002b36" -center ~/.xmonad/lambda.png
 hsetroot -solid "#002b36"
 
 IBUS_ENABLE_SYNC_MODE=1 ibus-daemon -xrd
@@ -27,7 +26,8 @@ $HOME/.xmonad/bin/irc-status-bar \
   "$HOME/.weechat/logs/irc.freenode-direct.#greatestguys.weechatlog" \
   'will:' '@will' 'fimad' 2>> ~/.xmonad/irc-status-bar.errors
 
-killall compton
+# Comptom is now started via ~/.xsession. For some reason it needs to be started
+# before xmonad in order for it to be aware of the active window.
 
 # -c  enable shadows
 # -f  fade windows in and out
@@ -38,11 +38,12 @@ killall compton
 # -z  zero the shadow behind windows
 # -b  run in background
 # -D  time between fade steps
-compton \
-  -c \
-  -b \
-  --inactive-dim 0.2 \
-  --focus-exclude "name~='dzen title'" \
-  --shadow-exclude "name~='.*'" \
-  --vsync opengl-swc  --paint-on-overlay --backend glx \
-  --use-ewmh-active-win --glx-no-stencil
+# compton --inactive-dim 0.2 --backend glx
+#compton \
+#  -b \
+#  -c \
+#  --inactive-dim 0.2 \
+#  --vsync opengl-swc  --paint-on-overlay --backend glx \
+#  --use-ewmh-active-win --glx-no-stencil \
+#  --focus-exclude "name~='dzen title'" \
+#  --shadow-exclude "name~='.*'" 
