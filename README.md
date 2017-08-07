@@ -37,3 +37,8 @@ things that a tool file can specify.
 
 Tools are installed in lexographic order of their file names. This allows for
 deterministic installation if a tool depends on another being installed.
+
+## setup
+
+`./setup.sh` performs one time setup operations such as RSA key generation. This
+script should not be repeated more than once per installation.
