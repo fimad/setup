@@ -2,17 +2,18 @@
 
 name=xmonad
 
+apt_deps=(
+  libxrandr-dev \
+  libxft-dev \
+  libxpm-dev \
+  libasound2-dev \
+)
+
 check_install() {
   test -f $HOME/.local/bin/xmonad
 }
 
 install() {
-  sudo apt-get install -y \
-      libxrandr-dev \
-      libxft-dev \
-      libxpm-dev \
-      libasound2-dev
-  
   stack install \
       --flag xmonad-contrib:with_xft \
       --flag xmobar:with_xft \

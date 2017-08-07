@@ -2,6 +2,8 @@
 
 name="powerline fonts"
 
+apt_deps=(git)
+
 check_install(){
   test -f "$HOME/.local/share/fonts/Inconsolata for Powerline.otf"
 }

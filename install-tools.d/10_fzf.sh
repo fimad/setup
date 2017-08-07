@@ -2,6 +2,8 @@
 
 name=fzf
 
+apt_deps=(git)
+
 check_install() {
   test -d ~/.fzf
 }

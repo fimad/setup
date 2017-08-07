@@ -2,6 +2,8 @@
 
 name=neovim-plug
 
+apt_deps=(curl)
+
 check_install() {
   test -f ~/.local/share/nvim/site/autoload/plug.vim
 }

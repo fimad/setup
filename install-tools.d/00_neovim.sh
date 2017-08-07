@@ -2,19 +2,22 @@
 
 name=neovim
 
+apt_deps=(
+  automake \
+  cmake \
+  git \
+  libtool \
+  libtool-bin \
+  m4 \
+  python-pip \
+  python3-pip \
+)
+
 check_install() {
   test -d ~/.local/neovim
 }
 
 install() {
-  sudo apt-get install -y \
-      automake \
-      cmake \
-      libtool \
-      libtool-bin \
-      m4 \
-      python-pip \
-      python3-pip
   git clone https://github.com/neovim/neovim /tmp/neovim
   ( 
     cd /tmp/neovim &&
