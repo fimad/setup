@@ -24,7 +24,7 @@ ghc \
   -o $HOME/.xmonad/bin/irc-status-bar 2> ~/.xmonad/irc-status-bar.errors
 $HOME/.xmonad/bin/irc-status-bar \
   '#greatestguys' \
-  "$HOME/.weechat/logs/irc.halfling.#greatestguys.weechatlog" \
+  "$HOME/.weechat/logs/irc.freenode-direct.#greatestguys.weechatlog" \
   'will:' '@will' 'fimad' 2>> ~/.xmonad/irc-status-bar.errors
 
 killall compton

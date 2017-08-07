@@ -79,6 +79,7 @@ spawnDzen2 = do
             ,   " -fn '", font, "'"
             ,   " -fg '#839496'"
             ,   " -bg '#002b36'"
+            ,   " -dock"
             ,   " -xs 2"
             ]
 

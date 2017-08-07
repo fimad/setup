@@ -6,6 +6,7 @@ apt_deps=(
   compton \
   dzen2 \
   hsetroot \
+  redshift \
   rxvt-unicode-256color \
   stalonetray \
   suckless-tools \
