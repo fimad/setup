@@ -10,7 +10,7 @@ do
 done
 
 info "Creating symlinks"
-for file in $(find dot.d -mindepth 1 -type f | sed 's!^dot.d/!!g')
+for file in $(find dot.d -mindepth 1 -type f -or -type l | sed 's!^dot.d/!!g')
 do
   if [ -f "dot.$(hostname).d/$file" ]
   then
