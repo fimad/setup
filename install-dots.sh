@@ -12,10 +12,10 @@ done
 info "Creating symlinks"
 for file in $(find dot.d -mindepth 1 -type f -or -type l | sed 's!^dot.d/!!g')
 do
-  if [ -f "dot.$(hostname).d/$file" ]
+  if [ -f "dot.$(hostname -a).d/$file" ]
   then
     notes=" (host override)"
-    target="$(pwd)/dot.$(hostname).d/$file"
+    target="$(pwd)/dot.$(hostname -a).d/$file"
   else
     notes=""
     target="$(pwd)/dot.d/$file"
