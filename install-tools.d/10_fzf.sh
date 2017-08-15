@@ -2,7 +2,7 @@
 
 name=fzf
 
-apt_deps=(git)
+apt_deps=(git silversearcher-ag)
 
 check_install() {
   test -d ~/.fzf
