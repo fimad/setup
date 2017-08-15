@@ -82,6 +82,7 @@ endif
 
 nnoremap <leader>f :NERDTreeTabsToggle<cr>
 let g:NERDTreeWinSize = 35
+let NERDTreeShowHidden=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key Bindings

@@ -80,7 +80,7 @@ spawnDzen2 = do
             ,   " -fg '#839496'"
             ,   " -bg '#002b36'"
             ,   " -dock"
-            ,   " -xs 2"
+            ,   " -xs 1"
             ]
 
 usageError :: SomeException -> IO a

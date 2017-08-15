@@ -26,7 +26,8 @@ install() {
     make install
   )
   rm -Rf /tmp/neovim
+  mkdir -p ~/.local/bin/
   ln -s ~/.local/neovim/bin/nvim ~/.local/bin/nvim
-  pip install neovim
-  pip3 install neovim
+  pip install --user neovim
+  pip3 install --user neovim
 }

@@ -80,6 +80,7 @@ myManager = composeAll [
   , title =? "html-hud" --> doFloat
   , className =? "stalonetray" --> doIgnore
   , className =? "net-minecraft-LauncherFrame" --> doFloat
+  , className =? "gnubby_ssh_prompt" --> doIgnore
 
   -- Attempt to shove all of the instant messaging programs on to the IM space
   , className =? "Pidgin" --> doShift "IM"
@@ -124,6 +125,7 @@ myAdditionalKeys = [
   , ((0, xK_Print), spawn "scrot")
 
   -- Commonly run programs
+  , ((controlMask .|. mod1Mask, xK_l), spawn "gnome-screensaver-command -l")
   , ((controlMask .|. mod1Mask, xK_bracketright), spawn "nautilus --no-desktop")
   , ((controlMask .|. mod1Mask, xK_bracketleft), spawn "google-chrome")
   , ((controlMask .|. mod1Mask, xK_Return), spawn "urxvt")
@@ -155,7 +157,7 @@ myAdditionalKeys = [
 
   -- Useful key strokes for dealing with apps that should go full screen but
   -- don't really.
-  , ((mod4Mask, xK_b), withFocused toggleBorder )
+  , ((mod4Mask, xK_b), withFocused toggleBorder)
   , ((mod4Mask, xK_f), (do
                       withFocused float
                       withFocused rmBorder
@@ -194,6 +196,8 @@ main = do
     , workspaces = myWorkspaces
     , modMask = mod4Mask -- Use the window key
     , logHook = takeTopFocus >> (dynamicLogWithPP $ printStatusBar h)
+    , focusFollowsMouse = False
+    , clickJustFocuses = True
   } `removeKeys` map fst myAdditionalKeys `additionalKeys` myAdditionalKeys
 
 printStatusBar :: Handle -> PP
