@@ -148,3 +148,7 @@ set ignorecase    " Do case insensitive matching
 set smartcase   " Do smart case matching
 
 set spell spelllang=en_us
+
+if !empty(glob("$HOME/.config/nvim/local.vim"))
+  source $HOME/.config/nvim/local.vim
+end

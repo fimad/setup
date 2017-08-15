@@ -11,6 +11,7 @@ apt_deps=(
   suckless-tools \
   thunar \
   tmux \
+  virtualenvwrapper \
   weechat \
   xclip \
 )

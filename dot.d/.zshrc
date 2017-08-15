@@ -135,9 +135,18 @@ export KEYTIMEOUT=50
 
 export STUDIO_VM_OPTIONS=~/studio64.vmoptions
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+source ~/.bash_aliases
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+# Worst feature ever
+unsetopt share_history
+
 if [ -f "$HOME/.zshrc.local" ]
 then
 	source "$HOME/.zshrc.local"
 fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -9,3 +9,8 @@ alias hexencode='hexdump -v -e '"'"'"\\\x"'"'"' -e '"'"'/1 "%02x"'"'"''
 alias hexquote='( hexdump -v -e '"'"'18/1 "x%02X"'"'"' -e '"'"'"\n"'"'"' | sed "s/x  //g" | sed "s/x/\\\\x/g" | sed -r "s/^|$/\"/g" )'
 
 alias rop=~/Code/ROPgadget/ROPgadget.py
+
+if [ -f "$HOME/.bash_aliases.local" ]
+then
+  source "$HOME/.bash_aliases.local"
+fi
