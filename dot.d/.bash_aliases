@@ -5,6 +5,9 @@ alias ggs='git log --graph --decorate --abbrev-commit --oneline --branches --col
 alias vim='nvim -p'
 alias nvim='nvim -p'
 
+# Always run tmux in 256 color mode.
+alias tmux='tmux -2'
+
 alias hexencode='hexdump -v -e '"'"'"\\\x"'"'"' -e '"'"'/1 "%02x"'"'"''
 alias hexquote='( hexdump -v -e '"'"'18/1 "x%02X"'"'"' -e '"'"'"\n"'"'"' | sed "s/x  //g" | sed "s/x/\\\\x/g" | sed -r "s/^|$/\"/g" )'
 
