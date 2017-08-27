@@ -13,6 +13,7 @@ apt_deps=(
   tmux \
   virtualenvwrapper \
   weechat \
+  xbacklight \
   xclip \
 )
 
