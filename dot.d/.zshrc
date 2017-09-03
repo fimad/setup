@@ -147,7 +147,10 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 # Worst feature ever
 unsetopt share_history
 
-if [ -f "$HOME/.zshrc.local" ]
-then
-	source "$HOME/.zshrc.local"
-fi
+for ext (nvm local)
+do
+  if [ -f "$HOME/.zshrc.$ext" ]
+  then
+    source "$HOME/.zshrc.$ext"
+  fi
+done
