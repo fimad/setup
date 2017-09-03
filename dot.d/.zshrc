@@ -57,7 +57,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$GRADLE_HOME/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
-export PATH=node_modules/.bin:$PATH
+export PATH=$PATH:node_modules/.bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
