@@ -54,9 +54,10 @@ source $ZSH/oh-my-zsh.sh
 #export TERM="rxvt-256color"
 [ -n "$TMUX" ] && export TERM="screen-256color"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$GRADLE_HOME/bin:/usr/local/go/bin:$PATH
-export PATH=$HOME/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH
+export PATH=$GRADLE_HOME/bin:$PATH
+export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=node_modules/.bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
