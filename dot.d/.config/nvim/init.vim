@@ -11,12 +11,10 @@ Plug 'vim-airline/vim-airline'
 " Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
 " Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 " Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'leafgarland/typescript-vim'
 
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-
-Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
 
 Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
@@ -31,6 +29,7 @@ call plug#end()
 " Plugins
 
 let g:airline_powerline_fonts = 1
+let g:typescript_indent_disable = 1
 
 """"""""""""""""""""""""""""""""""""""""
 " Tern

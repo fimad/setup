@@ -15,6 +15,7 @@ apt_deps=(
   weechat \
   xbacklight \
   xclip \
+  xdotool \
 )
 
 check_install() {
