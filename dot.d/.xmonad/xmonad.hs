@@ -138,6 +138,7 @@ myAdditionalKeys = [
   , ((controlMask .|. mod4Mask, xK_c), spawnWebApp "http://calendar.google.com")
   , ((controlMask .|. mod4Mask, xK_k), spawnWebApp "http://keep.google.com")
   , ((controlMask .|. mod4Mask, xK_f), spawnWebApp "http://facebook.com")
+  , ((controlMask .|. mod4Mask, xK_g), spawnWebApp "http://tnak.chat")
 
   -- Common chrome apps
   , ((controlMask .|. mod4Mask, xK_Return), spawnChromeApp chromeShellApp)
