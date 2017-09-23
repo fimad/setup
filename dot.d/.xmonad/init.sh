@@ -13,6 +13,9 @@ synclient TapButton1=0
 killall nm-applet
 nm-applet &
 
+killall blueman-applet
+blueman-applet &
+
 killall stalonetray
 stalonetray &
 
