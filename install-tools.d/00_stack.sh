@@ -3,7 +3,7 @@
 name=stack
 
 check_install() {
-  test -f /usr/local/bin/stack
+  test -f /usr/local/bin/stack || test -f /usr/bin/stack
 }
 
 install() {
