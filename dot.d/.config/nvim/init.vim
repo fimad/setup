@@ -4,7 +4,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
 Plug 'brooth/far.vim', { 'on': 'Far' }
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'iCyMind/NeoSolarized'
+"Plug 'iCyMind/NeoSolarized'
+Plug 'lifepillar/vim-solarized8'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
 Plug 'vim-airline/vim-airline'
 
@@ -116,7 +117,8 @@ let g:NERDTreeWinSize = 35
 " Solarized
 set t_Co=256
 set background=dark
-colorscheme NeoSolarized
+let g:solarized_termtrans=1
+colorscheme solarized8_dark
 
 set nofoldenable " Folds suck
 
