@@ -1,3 +1,9 @@
+" NeoVim is a piece of shit and does not detect typescript files correctly...
+autocmd BufNewFile,BufRead *.ts set syntax=typescript
+autocmd BufNewFile,BufRead *.ts set filetype=typescript
+autocmd BufNewFile,BufRead *.tsx set syntax=typescript
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -30,7 +36,7 @@ call plug#end()
 " Plugins
 
 let g:airline_powerline_fonts = 1
-let g:typescript_indent_disable = 1
+let g:typescript_indent_disable = 0
 
 """"""""""""""""""""""""""""""""""""""""
 " Tern
@@ -40,7 +46,7 @@ if !exists('g:deoplete#omni#input_patterns')
   let g:deoplete#omni#input_patterns = {}
 endif
 
-set completeopt=longest,menuone 
+set completeopt=longest,menuone
 let g:deoplete#sources = {}
 let g:deoplete#sources['javascript.jsx'] =  ['file', 'neosnippet', 'ternjs']
 let g:deoplete#sources['javascript'] = ['file', 'neosnippet', 'ternjs']
@@ -76,9 +82,9 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
+" if has('conceal')
+"   set conceallevel=2 concealcursor=niv
+" endif
 
 nnoremap <leader>f :NERDTreeTabsToggle<cr>
 let g:NERDTreeWinSize = 35
@@ -112,7 +118,7 @@ nnoremap <leader>f :NERDTreeTabsToggle<cr>
 let g:NERDTreeWinSize = 35
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Appearance 
+" Appearance
 
 " Solarized
 set t_Co=256
@@ -149,6 +155,8 @@ set ignorecase    " Do case insensitive matching
 set smartcase   " Do smart case matching
 
 set spell spelllang=en_us
+
+autocmd BufWritePre * %s/\s\+$//e
 
 if !empty(glob("$HOME/.config/nvim/local.vim"))
   source $HOME/.config/nvim/local.vim
