@@ -32,6 +32,7 @@ call plug#end()
 let g:airline_powerline_fonts = 1
 let g:typescript_indent_disable = 1
 
+
 """"""""""""""""""""""""""""""""""""""""
 " Tern
 
@@ -128,6 +129,9 @@ set nu "line numbers
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Behavior
+
+" Please don't hide quotes in JSON files, really wtf.
+set conceallevel=0
 
 " Fuck swap files
 set noswapfile
