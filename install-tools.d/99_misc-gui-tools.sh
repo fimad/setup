@@ -1,6 +1,8 @@
 #!/bin/bash
 
-name="misc tools"
+name="misc gui tools"
+
+tags=(-tui)
 
 apt_deps=(
   dzen2 \
@@ -10,9 +12,6 @@ apt_deps=(
   stalonetray \
   suckless-tools \
   thunar \
-  tmux \
-  virtualenvwrapper \
-  weechat \
   xbacklight \
   xclip \
   xdotool \
@@ -25,3 +24,4 @@ check_install() {
 install() {
   true
 }
+
