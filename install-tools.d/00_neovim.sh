@@ -18,6 +18,7 @@ check_install() {
 }
 
 install() {
+  mkdir /tmp/neovim
   git clone https://github.com/neovim/neovim /tmp/neovim
   (
     cd /tmp/neovim &&
