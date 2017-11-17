@@ -30,7 +30,7 @@ fi
 
 do_install() {
   info "Installing ${name}"
-  # install
+  install
 }
 
 do_skip() {
@@ -43,9 +43,6 @@ do
   unset install
   tags=()
   . ${tool}
-  check_install()  {
-    return 1
-  }
   if tags_match tags
   then
     check_install && do_skip || do_install

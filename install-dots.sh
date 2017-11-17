@@ -2,10 +2,6 @@
 
 . ./lib.sh
 
-exit
-
-user_tags=("${BASH_ARGV[@]}")
-
 # Find tagged dot directories that match the current environment.
 matched_tag_dots=(./dot.d)
 for tag_dot in $(find . -mindepth 1 -maxdepth 1 -type d -name 'dot.tag.*.d')
