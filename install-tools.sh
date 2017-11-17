@@ -9,7 +9,7 @@ do
   tags=()
   apt_deps=()
   . ${tool}
-  if tags_match tags tags
+  if tags_match tags
   then
     all_apt_deps=(${all_apt_deps[*]} ${apt_deps[*]})
   fi

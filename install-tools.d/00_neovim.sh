@@ -19,7 +19,7 @@ check_install() {
 
 install() {
   git clone https://github.com/neovim/neovim /tmp/neovim
-  ( 
+  (
     cd /tmp/neovim &&
     git checkout v0.2.0 &&
     make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/.local/neovim" &&
