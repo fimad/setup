@@ -2,6 +2,8 @@
 
 name=compton
 
+tags=(-tui)
+
 apt_deps=(
   libconfig-dev \
   libdbus-1-dev \

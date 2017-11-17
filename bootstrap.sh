@@ -6,5 +6,5 @@ cd ~/Code
 git clone https://github.com/fimad/setup.git
 cd setup
 ./install-tools.sh "$@"
-./install-dots.sh
+./install-dots.sh "$@"
 ./setup.sh
