@@ -2,6 +2,8 @@
 
 . ./lib.sh
 
+exit
+
 user_tags=("${BASH_ARGV[@]}")
 
 # Find tagged dot directories that match the current environment.

@@ -17,7 +17,15 @@ function warn {
 
 # The arguments supplied to this script are a set of tags that describe the
 # environment that is being setup.
-user_tags=("${BASH_ARGV[@]}")
+user_tags=("${BASH_ARGV[@]:1}")
+
+# Also load additional tags based on the hostname as well.
+host_tags_file="./tags.d/$(hostname -s)"
+if [ -f "$host_tags_file" ]
+then
+  host_tags=$(cat "$host_tags_file")
+  user_tags=(${user_tags[*]} "$host_tags")
+fi
 
 tags_match() {
   local -n _tags=$1
