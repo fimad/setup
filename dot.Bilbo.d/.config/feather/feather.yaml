@@ -1,0 +1,44 @@
+cachedir: /home/will/.local/tarsnap/cachedir
+keyfile: /home/will/.local/tarsnap/tarsnap.key
+binpath: /usr/bin/
+
+backup_args: "--nodump"
+
+schedule:
+  - yearly:
+    - period: 31536000 # 365 days
+    - always_keep: 1000
+    - after: "0200"
+    - before: "0800"
+  - monthly:
+    - period: 2592000 # 30 days
+    - always_keep: 12
+    - after: "0200"
+    - before: "0800"
+    - implies: yearly
+  - daily:
+    - period: 86400 # 1 day
+    - always_keep: 31
+    - after: "0200"
+    - before: "0800"
+    - implies: monthly
+
+backups:
+  - documents:
+    - schedule: daily
+    - workingpath: /home/will
+    - path:
+      - Code
+      - Documents
+      - Hacking
+  - media:
+    - schedule: daily
+    - workingpath: /home/will
+    - path:
+      - Pictures
+      - Videos
+  - etc:
+    - schedule: daily
+    - workingpath: /
+    - path:
+      - etc

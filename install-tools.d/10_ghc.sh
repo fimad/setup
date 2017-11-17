@@ -2,6 +2,8 @@
 
 name=ghc
 
+tags=(-tui)
+
 check_install() {
   test -f $HOME/.local/bin/ghc
 }

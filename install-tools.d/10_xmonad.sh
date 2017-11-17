@@ -2,6 +2,8 @@
 
 name=xmonad
 
+tags=(-tui)
+
 apt_deps=(
   libxrandr-dev \
   libxft-dev \
