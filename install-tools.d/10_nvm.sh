@@ -2,6 +2,8 @@
 
 name=nvm
 
+tags=(-work)
+
 apt_deps=(git)
 
 check_install() {

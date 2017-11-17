@@ -2,6 +2,8 @@
 
 name=feather
 
+tags=(-work)
+
 apt_deps=(python-yaml)
 
 check_install() {

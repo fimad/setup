@@ -2,6 +2,8 @@
 
 name=tarsnap
 
+tags=(-work)
+
 check_install() {
   which tarsnap 2>&1 > /dev/null
 }

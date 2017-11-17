@@ -25,18 +25,40 @@ dot.d.
 ## install-tools
 
 `./install-tools.sh` is an idempotent script that can be used to install all of
-the varoius binaries that I have deemed necessary.
+the various binaries that I have deemed necessary.
 
 Each tool has a file in the `install-tools.d` folder. There are currently four
 things that a tool file can specify.
 
 1. `name` is a human readable string naming the tool.
 2. `apt_deps` is an array of apt packages that are required to install the tool.
-3. `check_install` is a function that returns zero if the tool is installed.
-4. `install` is a function that performs the tool's installation.
+3. `tags` is an array of tags that describe which environments the tool should
+   be installed on.
+4. `check_install` is a function that returns zero if the tool is installed.
+5. `install` is a function that performs the tool's installation.
 
-Tools are installed in lexographic order of their file names. This allows for
+Tools are installed in lexicographic order of their file names. This allows for
 deterministic installation if a tool depends on another being installed.
+
+### Tags
+
+The `install-tools.sh` script tags a list of tags as command line arguments. The
+currently used tags are:
+
+* work - An instance that I use at work. Avoid installing tools that aren't
+  appropriate for running at work (e.g. backup utilities).
+* tui - An instance that will only run terminal applications. No need to install
+  any gui applications.
+
+The `tags` array in a tool script can contain positive and negative tags. A
+positive is just the tag, a negative tag is written by prefixing a tag name with
+a `-`.
+
+A positive tag match will make it so that the tool is *only* installed on
+instances where the user supplied that tag.
+
+A negative tag match will prevent installation of the tool if the user supplies
+that specific tag.
 
 ## setup
 
