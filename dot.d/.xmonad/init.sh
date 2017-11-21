@@ -24,4 +24,4 @@ redshift -l '47.6647906:-122.3436361' &
 
 ~/.xmonad/init.irc.sh
 
-xmobar -x 0
+~/.local/bin/xmobar -x 0

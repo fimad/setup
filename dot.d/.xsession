@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+PATH="$HOME/.local/bin:$PATH"
+PATH="$HOME/.xmonad/bin:$PATH"
+
 # -c  enable shadows
 # -f  fade windows in and out
 # -o  shadow opacity
@@ -17,7 +20,7 @@
 #  --vsync opengl-swc  --paint-on-overlay --backend glx \
 #  --use-ewmh-active-win --glx-no-stencil \
 #  --focus-exclude "name~='dzen title'" \
-#  --shadow-exclude "name~='.*'" 
+#  --shadow-exclude "name~='.*'"
 
 # xmobar must be last and must be left in the foreground so that it can
 # communicate with xmonad over a pipe.
