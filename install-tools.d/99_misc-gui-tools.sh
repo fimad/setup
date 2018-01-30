@@ -15,6 +15,7 @@ apt_deps=(
   xbacklight \
   xclip \
   xdotool \
+  dm-tool \
 )
 
 check_install() {
