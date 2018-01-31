@@ -10,17 +10,13 @@ IBUS_ENABLE_SYNC_MODE=1 ibus-daemon -xrd
 # Disable the tap to click.
 synclient TapButton1=0
 
-killall nm-applet
-nm-applet &
+pgrep nm-applet || nm-applet &
 
-killall blueman-applet
-blueman-applet &
+pgrep blueman-applet || blueman-applet &
 
-killall stalonetray
-stalonetray &
+pgrep stalonetray || stalonetray &
 
-killall redshift
-redshift -l '47.6647906:-122.3436361' &
+pgrep redshift || redshift -l '47.6647906:-122.3436361' &
 
 ~/.xmonad/init.irc.sh
 
