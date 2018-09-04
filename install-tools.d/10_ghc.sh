@@ -10,6 +10,7 @@ check_install() {
 
 install() {
   echo '#!/bin/bash' > $HOME/.local/bin/ghc
+  echo 'stack setup 2> /dev/null > /dev/null' >> $HOME/.local/bin/gh
   echo 'stack ghc -- $@' >> $HOME/.local/bin/ghc
   chmod +x $HOME/.local/bin/ghc
 }
