@@ -132,13 +132,14 @@ myAdditionalKeys = [
   , ((mod4Mask, xK_p), spawn "dmenu_run -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93a1a1' -fn '-*-fixed-*-*-*-*-*-*-*-*-*-*-*-*'")
 
   -- Common web apps
-  , ((controlMask .|. mod4Mask, xK_i), spawnWebApp "http://inbox.google.com")
-  , ((controlMask .|. mod4Mask, xK_m), spawnWebApp "http://music.google.com")
-  , ((controlMask .|. mod4Mask, xK_d), spawnWebApp "http://drive.google.com")
   , ((controlMask .|. mod4Mask, xK_c), spawnWebApp "http://calendar.google.com")
-  , ((controlMask .|. mod4Mask, xK_k), spawnWebApp "http://keep.google.com")
+  , ((controlMask .|. mod4Mask, xK_d), spawnWebApp "http://drive.google.com")
   , ((controlMask .|. mod4Mask, xK_f), spawnWebApp "http://facebook.com")
   , ((controlMask .|. mod4Mask, xK_g), spawnWebApp "http://tnak.chat")
+  , ((controlMask .|. mod4Mask, xK_i), spawnWebApp "http://inbox.google.com")
+  , ((controlMask .|. mod4Mask, xK_k), spawnWebApp "http://keep.google.com")
+  , ((controlMask .|. mod4Mask, xK_m), spawnWebApp "http://music.google.com")
+  , ((controlMask .|. mod4Mask, xK_t), spawnWebApp "http://messages.android.com")
 
   -- Common chrome apps
   , ((controlMask .|. mod4Mask, xK_Return), spawnChromeApp chromeShellApp)
