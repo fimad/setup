@@ -23,7 +23,7 @@ install() {
   (
     cd /tmp/neovim &&
     git checkout v0.3.1 &&
-    make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/.local/neovim" &&
+    make CMAKE_EXTRA_FLAGS="-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=$HOME/.local/neovim" &&
     make install
   )
   rm -Rf /tmp/neovim
