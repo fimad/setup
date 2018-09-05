@@ -15,3 +15,6 @@ install() {
     -O ~/.weechat/python/autoload/wee_slack.py
 }
 
+upgrade() {
+  install
+}

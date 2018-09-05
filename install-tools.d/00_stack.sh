@@ -12,3 +12,8 @@ install() {
   curl -sSL https://get.haskellstack.org/ | sh
   stack setup
 }
+
+upgrade() {
+  stack upgrade
+  stack setup
+}

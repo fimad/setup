@@ -13,3 +13,7 @@ install() {
     https://github.com/tmux-plugins/tpm \
     ~/.tmux/plugins/tpm
 }
+
+upgrade() {
+  ( cd ~/.tmux/plugins/tpm/ && git pull )
+}

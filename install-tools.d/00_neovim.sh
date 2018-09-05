@@ -32,3 +32,8 @@ install() {
   pip install --user neovim
   pip3 install --user neovim
 }
+
+upgrade() {
+  rm -Rf ~/.local/neovim/ ~/.local/bin/nvim
+  install
+}

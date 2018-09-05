@@ -40,6 +40,15 @@ things that a tool file can specify.
 Tools are installed in lexicographic order of their file names. This allows for
 deterministic installation if a tool depends on another being installed.
 
+### upgrade-tools
+
+Tools can be automatically updated by running `./upgrade-tools.sh`. This is
+currently fairly dumb and does not perform any version checks. This means that a
+tool may "upgrade" to the current version.
+
+To allow a tool to be upgraded a `upgrade` function needs to be defined in the
+appropriate script in the `install-tools.d` folder.
+
 ### Tags
 
 The `install-tools.sh` script tags a list of tags as command line arguments. The
