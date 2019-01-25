@@ -5,6 +5,7 @@ import System.IO
 import System.Process
 import XMonad
 import XMonad.Config.Desktop
+import XMonad.Actions.CopyWindow
 import XMonad.Actions.CycleWS
 import XMonad.Actions.DynamicWorkspaces
 import XMonad.Actions.NoBorders
@@ -165,6 +166,11 @@ myAdditionalKeys = [
                       withFocused rmBorder
                       spawn "fs-window")
     )
+
+  -- Make the focus window available on all workspaces and undo.
+  , ((mod4Mask, xK_v ), windows copyToAll)
+  , ((mod4Mask .|. shiftMask, xK_v ),  killAllOtherCopies)
+
   ] ++
   -- Generate the key bindings for all of our workspaces
   (
