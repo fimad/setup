@@ -12,9 +12,11 @@ apt_deps=(
   stalonetray \
   suckless-tools \
   thunar \
+  xautolock \
   xbacklight \
   xclip \
   xdotool \
+  xfce4-notifyd \
 )
 
 check_install() {

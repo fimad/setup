@@ -11,13 +11,13 @@ IBUS_ENABLE_SYNC_MODE=1 ibus-daemon -xrd
 synclient TapButton1=0
 
 pgrep nm-applet || nm-applet &
-
 pgrep blueman-applet || blueman-applet &
-
 pgrep stalonetray || stalonetray &
-
 pgrep redshift || redshift -l '47.6647906:-122.3436361' &
+pgrep xfce4-notifyd || \
+  /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd &
 
 ~/.xmonad/init.irc.sh
+~/.xmonad/init.lock.sh
 
 ~/.local/bin/xmobar -x 0
