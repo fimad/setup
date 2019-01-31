@@ -13,6 +13,7 @@ message="Locking screen in $message_timeout_seconds seconds..."
 
 killall xautolock
 xautolock \
+  -detectsleep \
   -time "$lock_screen_timeout_minutes" \
   -locker "dm-tool lock" \
   -notify "$message_timeout_seconds" \
