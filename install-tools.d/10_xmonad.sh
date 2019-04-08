@@ -5,10 +5,11 @@ name=xmonad
 tags=(-tui)
 
 apt_deps=(
-  libxrandr-dev \
+  libasound2-dev \
   libxft-dev \
   libxpm-dev \
-  libasound2-dev \
+  libxrandr-dev \
+  libxss-dev \
 )
 
 check_install() {

@@ -8,6 +8,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'brooth/far.vim', { 'on': 'Far' }
 Plug 'christoomey/vim-tmux-navigator'
 "Plug 'iCyMind/NeoSolarized'
