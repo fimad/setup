@@ -62,7 +62,7 @@ myLayout = avoidStruts
 myWorkspaces :: [String]
 myWorkspaces = [
         "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
-    ,   "gimp", "wine"
+    ,   "gimp", "wine", "im"
     ]
 
 myWorkspaceKeys :: [KeySym]
@@ -84,9 +84,9 @@ myManager = composeAll [
   , className =? "gnubby_ssh_prompt" --> doIgnore
 
   -- Attempt to shove all of the instant messaging programs on to the IM space
-  , className =? "Pidgin" --> doShift "IM"
-  , className =? "Instantbird" --> doShift "IM"
-  , className =? "Skype" --> doShift "IM"
+  -- , className =? "Pidgin" --> doShift "IM"
+  -- , className =? "Instantbird" --> doShift "IM"
+  -- , className =? "Skype" --> doShift "IM"
 
   -- Wine gets a whole space to its self it's so bad
   , title =? "exe" --> doIgnore
@@ -140,7 +140,7 @@ myAdditionalKeys = [
   , ((controlMask .|. mod4Mask, xK_i), spawnWebApp "http://inbox.google.com")
   , ((controlMask .|. mod4Mask, xK_k), spawnWebApp "http://keep.google.com")
   , ((controlMask .|. mod4Mask, xK_m), spawnWebApp "http://music.google.com")
-  , ((controlMask .|. mod4Mask, xK_t), spawnWebApp "http://messages.android.com")
+  , ((controlMask .|. mod4Mask, xK_t), spawnWebApp "https://messages.google.com/web")
 
   -- Common chrome apps
   , ((controlMask .|. mod4Mask, xK_Return), spawnChromeApp chromeShellApp)
