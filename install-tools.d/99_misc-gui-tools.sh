@@ -7,6 +7,7 @@ tags=(-tui)
 apt_deps=(
   dzen2 \
   hsetroot \
+  i3lock \
   redshift \
   rxvt-unicode-256color \
   stalonetray \

@@ -126,7 +126,7 @@ myAdditionalKeys = [
   , ((0, xK_Print), spawn "scrot")
 
   -- Commonly run programs
-  , ((controlMask .|. mod1Mask, xK_l), spawn "dm-tool lock")
+  , ((controlMask .|. mod1Mask, xK_l), spawn "xautolock -locknow")
   , ((controlMask .|. mod1Mask, xK_bracketright), spawn "nautilus --no-desktop")
   , ((controlMask .|. mod1Mask, xK_bracketleft), spawn "google-chrome")
   , ((controlMask .|. mod1Mask, xK_Return), spawn "urxvt")

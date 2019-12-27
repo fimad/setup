@@ -15,6 +15,6 @@ killall xautolock
 xautolock \
   -detectsleep \
   -time "$lock_screen_timeout_minutes" \
-  -locker "dm-tool lock" \
+  -locker "i3lock -c 002b36 -n -f -e" \
   -notify "$message_timeout_seconds" \
   -notifier "notify-send -t 10000 -i gtk-dialog-info '$message'" &
