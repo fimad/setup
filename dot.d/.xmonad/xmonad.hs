@@ -140,7 +140,7 @@ myAdditionalKeys = [
   , ((controlMask .|. mod4Mask, xK_i), spawnWebApp "http://inbox.google.com")
   , ((controlMask .|. mod4Mask, xK_k), spawnWebApp "http://keep.google.com")
   , ((controlMask .|. mod4Mask, xK_m), spawnWebApp "http://music.google.com")
-  , ((controlMask .|. mod4Mask, xK_t), spawnWebApp "http://messages.android.com")
+  , ((controlMask .|. mod4Mask, xK_t), spawnWebApp "https://messages.google.com/web")
 
   -- Common chrome apps
   , ((controlMask .|. mod4Mask, xK_Return), spawnChromeApp chromeShellApp)
