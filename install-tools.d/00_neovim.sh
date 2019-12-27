@@ -22,7 +22,7 @@ install() {
   git clone https://github.com/neovim/neovim /tmp/neovim
   (
     cd /tmp/neovim &&
-    git checkout v0.3.1 &&
+    git checkout v0.4.3 &&
     make CMAKE_EXTRA_FLAGS="-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=$HOME/.local/neovim" &&
     make install
   )
