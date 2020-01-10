@@ -6,7 +6,7 @@ apt_deps=(
   tmux \
   virtualenvwrapper \
   weechat \
-  htop \
+  htop \
 )
 
 check_install() {
