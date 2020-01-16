@@ -82,6 +82,7 @@ myManager = composeAll [
   , className =? "stalonetray" --> doIgnore
   , className =? "net-minecraft-LauncherFrame" --> doFloat
   , className =? "gnubby_ssh_prompt" --> doIgnore
+  , stringProperty "WM_WINDOW_ROLE"  =? "bubble" --> doIgnore
 
   -- Attempt to shove all of the instant messaging programs on to the IM space
   , className =? "Pidgin" --> doShift "IM"
