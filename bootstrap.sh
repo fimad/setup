@@ -5,6 +5,6 @@ mkdir -p ~/Code
 cd ~/Code
 git clone https://github.com/fimad/setup.git
 cd setup
-./install-tools.sh "$@"
 ./install-dots.sh "$@"
+./install-tools.sh "$@"
 ./setup.sh

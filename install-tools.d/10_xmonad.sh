@@ -18,9 +18,10 @@ check_install() {
 
 install() {
   stack install \
-      --flag xmonad-contrib:with_xft \
+      --flag xmonad-contrib:use_xft \
       --flag xmobar:with_xft \
       --flag xmobar:with_xpm \
       --flag xmobar:with_alsa \
       alex happy xmonad xmonad-contrib xmobar
+  (cd "$HOME/.xmonad/" && ./build "$HOME/.local/bin/xmonad")
 }
