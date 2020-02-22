@@ -54,6 +54,7 @@ source $ZSH/oh-my-zsh.sh
 #export TERM="rxvt-256color"
 [ -n "$TMUX" ] && export TERM="screen-256color"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/snap/bin:$PATH
 export PATH=$GRADLE_HOME/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
