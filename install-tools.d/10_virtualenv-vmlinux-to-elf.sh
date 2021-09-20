@@ -5,7 +5,7 @@ name=virtualenv-pwntools
 tags=(ctf)
 
 check_install() {
-  test -d ~/.virtualenvs/pwn3/lib/*/site-packages/vmlinux_to_elf
+  test -d ~/.virtualenvs/pwn/lib/*/site-packages/vmlinux_to_elf
 }
 
 install() {
