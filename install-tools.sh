@@ -22,6 +22,7 @@ then
   info "Skipping apt dependencies"
 else
   info "Installing apt dependencies"
+  sudo apt update
   sudo apt-get install -y "${all_apt_deps[@]}"
 fi
 
