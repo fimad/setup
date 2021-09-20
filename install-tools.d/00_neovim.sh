@@ -9,6 +9,7 @@ apt_deps=(
   libtool \
   libtool-bin \
   m4 \
+  pkgconf \
   python3-pip \
 )
 
