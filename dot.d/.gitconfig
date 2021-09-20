@@ -18,5 +18,5 @@
     br = branch
     diff = diff --word-diff
     dc = diff --cached
-#[url "git@github.com:"]
-#	insteadOf = https://github.com/
+[url "git@github.com:"]
+	insteadOf = https://github.com/

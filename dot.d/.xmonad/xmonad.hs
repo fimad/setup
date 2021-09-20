@@ -1,5 +1,6 @@
 {-# LANGUAGE UnicodeSyntax #-}
 import Data.Ratio ((%))
+import Data.List (isPrefixOf, isInfixOf)
 import System.Environment
 import System.IO
 import System.Process
@@ -83,6 +84,16 @@ myManager = composeAll [
   , className =? "net-minecraft-LauncherFrame" --> doFloat
   , className =? "gnubby_ssh_prompt" --> doIgnore
   , stringProperty "WM_WINDOW_ROLE"  =? "bubble" --> doIgnore
+
+  -- Make Ghidra popups float.
+  , fmap ("CodeBrowser" `isInfixOf`) title <&&>
+    fmap (not . ("CodeBrowser" `isPrefixOf`)) title --> doFloat
+--  , (fmap ("References to" `isPrefixOf`) title) <&&>
+--    (fmap ("CodeBrowser:" `isInfixOf`) title) --> doFloat
+--  , (fmap ("Structure Editor - " `isPrefixOf`) title) <&&>
+--    (fmap ("CodeBrowser:" `isInfixOf`) title) --> doFloat
+--  , (fmap ("Instruction Info: " `isPrefixOf`) title) <&&>
+--    (fmap ("CodeBrowser:" `isInfixOf`) title) --> doFloat
 
   -- Attempt to shove all of the instant messaging programs on to the IM space
   -- , className =? "Pidgin" --> doShift "IM"
