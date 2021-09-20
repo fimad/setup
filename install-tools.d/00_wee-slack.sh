@@ -2,6 +2,8 @@
 
 name=wee-slack
 
+tags=(-ctf)
+
 apt_deps=(python-websocket)
 
 check_install() {

@@ -2,6 +2,8 @@
 
 name="powerline fonts"
 
+tags=(-tui)
+
 apt_deps=(git)
 
 check_install(){

@@ -2,7 +2,10 @@
 
 name=nvm
 
-tags=(-work)
+tags=(
+  -ctf
+  -work
+)
 
 apt_deps=(git)
 

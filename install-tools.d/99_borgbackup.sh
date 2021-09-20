@@ -2,7 +2,10 @@
 
 name="BorgBackup"
 
-tags=(-work)
+tags=(
+  -ctf
+  -work
+)
 
 apt_deps=(borgbackup)
 

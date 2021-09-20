@@ -2,7 +2,10 @@
 
 name=docker-machine
 
-tags=(-work)
+tags=(
+  -ctf
+  -work
+)
 
 check_install() {
   test -f ~/.local/bin/docker-machine
